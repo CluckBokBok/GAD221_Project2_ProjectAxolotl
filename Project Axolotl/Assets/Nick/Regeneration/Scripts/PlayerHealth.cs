@@ -18,7 +18,7 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("Regeneration")]
     public float regenerationTimer = 10.0f;
-    public float regenrationTimeToCount = 10f;
+    public float regenerationTimeToCount = 10f;
 
     [Header("Timer")]
     [Tooltip("if true countdown, if false dont countdown")]
@@ -59,13 +59,13 @@ public class PlayerHealth : MonoBehaviour
     {
         //Debug.Log("Time Ended");
 
-        regenrationTimeToCount += 5f; // add to the timer
-        regenerationTimer = regenrationTimeToCount; // reset timer
+        regenerationTimeToCount += 5f; // add to time the timer
+        regenerationTimer = regenerationTimeToCount; // reset timer
 
         AddPlayerHealth(1); // give the player health
     }
 
-    public void AddPlayerHealth(int healthAmount) //  change player health, NOTE - can pass through a negative number as well
+    public void AddPlayerHealth(int healthAmount) //  change player health, NOTE - can also pass through a negative number 
     {
         health += healthAmount;
         Debug.Log("Added [" +  healthAmount + "] Health");
@@ -88,7 +88,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void ResetRegenerationTimer() // resets the timer
     {
-        regenerationTimer = regenrationTimeToCount;
+        regenerationTimer = regenerationTimeToCount;
 
         //Debug.Log("reset regen timer");
 
