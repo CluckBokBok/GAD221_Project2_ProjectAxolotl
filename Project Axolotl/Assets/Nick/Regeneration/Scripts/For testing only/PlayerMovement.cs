@@ -2,21 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// NOTE - in Project Settings -> Input Manager -> Axes -> Vertical, change alt postive button to "space"
+
 public class PlayerMovement : MonoBehaviour
 {
 
-    // NOTE - in Project Settings -> Input Manager -> Axes -> Vertical, change alt postive button to "space"
+    #region Variables
 
     private Rigidbody2D playerRigidBody2D;
 
+    [Header("Movement")]
     public float moveSpeed;
     public float jumpPower;
     [SerializeField] private bool isJumping;
+    public bool canMove; // allows player movement if true
 
-    private float moveHorizontal;
+    public float moveHorizontal;
     private float moveVertical;
 
-    public bool canMove; // allows player movement if true
+    #endregion
 
     void Start()
     {
