@@ -62,13 +62,14 @@ public class PlayerHealth : MonoBehaviour
         regenerationTimeToCount += 5f; // add to time the timer
         regenerationTimer = regenerationTimeToCount; // reset timer
 
-        AddPlayerHealth(1); // give the player health
+        ChangePlayerHealth(1); // give the player health
     }
 
-    public void AddPlayerHealth(int healthAmount) //  change player health, NOTE - can also pass through a negative number 
+    public void ChangePlayerHealth(int healthAmount) //  change player health, NOTE - can also pass through a negative number 
     {
+        Debug.Log("Adding [" + healthAmount + "] Health");
         health += healthAmount;
-        Debug.Log("Added [" +  healthAmount + "] Health");
+        
 
         #region Health Limits
         if (health > maxHealthAllowed)
