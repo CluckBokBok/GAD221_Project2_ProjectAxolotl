@@ -356,7 +356,7 @@ MonoBehaviour:
   health: 3
   maxHealthAllowed: 5
   regenerationTimer: 10
-  regenrationTimeToCount: 10
+  regenerationTimeToCount: 10
   countDown: 0
   healthText: {fileID: 1334134034}
   maxHealthText: {fileID: 74801166}
@@ -1077,7 +1077,7 @@ GameObject:
   - component: {fileID: 1965290520}
   m_Layer: 0
   m_Name: --- Player ---
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
