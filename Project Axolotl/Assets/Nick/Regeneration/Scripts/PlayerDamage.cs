@@ -27,7 +27,7 @@ public class PlayerDamage : MonoBehaviour
             if (playerHealth == null)
             {
                 //Debug.Log("getting reference");
-                playerHealth = FindObjectOfType<PlayerHealth>();               
+                playerHealth = FindObjectOfType<PlayerHealth>(); // get reference to player health               
             }
 
             //Debug.Log("dealing [" + amountDamage + "] damage");
