@@ -606,7 +606,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 381191112399787164, guid: ad49b013bc948094b8514fcc3d903da4, type: 3}
       propertyPath: m_Name
-      value: Deadly Spike - 2
+      value: Deadly Spike
       objectReference: {fileID: 0}
     - target: {fileID: 6572192735438571423, guid: ad49b013bc948094b8514fcc3d903da4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -760,7 +760,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7985259438697478880, guid: 2de0067a5eec9954485cc357b73bd136, type: 3}
       propertyPath: m_Name
-      value: Weak Spike - 1
+      value: Weak Spike
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
