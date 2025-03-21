@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8505254441861540049}
   - component: {fileID: 8738302532545117143}
+  - component: {fileID: 5169608010218521187}
   m_Layer: 0
   m_Name: --- Player Health  ---
   m_TagString: Untagged
@@ -51,3 +52,17 @@ MonoBehaviour:
   countDown: 0
   healthText: {fileID: 0}
   maxHealthText: {fileID: 0}
+--- !u!114 &5169608010218521187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2254233861012974053}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 347a436e44dcf804e8687b4efa903662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerBar: {fileID: 0}
+  pHealth: {fileID: 0}
