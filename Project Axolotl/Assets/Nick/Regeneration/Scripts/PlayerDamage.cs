@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerDamage : MonoBehaviour
 {
 
+    #region Variables
+
     [Header("Damage")]
     [Tooltip("The amount damage that will be inflicted")]
     public int amountDamage; // used for the amount of damage - NOTE - change this in the inspector
@@ -12,12 +14,12 @@ public class PlayerDamage : MonoBehaviour
     [Header("References")]
     [SerializeField] private PlayerHealth playerHealth; // reference
 
+    #endregion
 
     void Start()
     {
         //Debug.Log("this hazard will deal [" + amountDamage + "] damage"); 
     }
-
 
     private void OnCollisionEnter2D(Collision2D collision)
     {

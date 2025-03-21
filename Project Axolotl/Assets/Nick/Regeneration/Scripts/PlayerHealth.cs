@@ -43,7 +43,7 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        if (countDown == true && health <= maxHealthAllowed) // needs to be able to count down (bool) and less than the max health allowed
+        if (countDown == true && health < maxHealthAllowed) // needs to be able to count down (bool) and less than the max health allowed
         {
             regenerationTimer -= Time.deltaTime;
         }

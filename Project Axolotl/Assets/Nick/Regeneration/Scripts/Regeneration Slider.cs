@@ -5,28 +5,32 @@ using UnityEngine.UI;
 
 public class RegenerationSlider : MonoBehaviour
 {
-    public Image timerBar;
+
+    #region Variables
+
+    [Header("References")]
+    public Image timerBar; // image/bar to shrink
     [SerializeField] private PlayerHealth pHealth;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    #endregion
+
     void Start()
     {
-        pHealth = FindObjectOfType<PlayerHealth>();
-        pHealth.regenerationTimer = pHealth.regenerationTimeToCount;
+        pHealth = FindObjectOfType<PlayerHealth>(); // get referemce
+        pHealth.regenerationTimer = pHealth.regenerationTimeToCount; // start timer
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (pHealth.regenerationTimer > 0)
+        if (pHealth.regenerationTimer > 0) // change bar
         {
-            pHealth.regenerationTimer -= Time.deltaTime;
-            timerBar.fillAmount = pHealth.regenerationTimer / pHealth.regenerationTimeToCount;
+            timerBar.fillAmount = pHealth.regenerationTimer / pHealth.regenerationTimeToCount; // reduce size bar
         }
 
-        else if (pHealth.regenerationTimer <= 0)
+        else if (pHealth.regenerationTimer <= 0) // when bar reaches 0
         {
-            pHealth.regenerationTimer = pHealth.regenerationTimeToCount;
+            //Debug.Log("reset timer");
+            pHealth.regenerationTimer = pHealth.regenerationTimeToCount; // reset
         }
 
     }
