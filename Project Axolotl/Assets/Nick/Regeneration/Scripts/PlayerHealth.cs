@@ -32,7 +32,7 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        regenerationTimer = 10f; // testing timer
+        regenerationTimer = 0f; // testing timer
         maxHealthAllowed = 5; // testing max health
         health = 3; // testing health
 
@@ -45,12 +45,13 @@ public class PlayerHealth : MonoBehaviour
     {
         if (countDown == true && health < maxHealthAllowed) // needs to be able to count down (bool) and less than the max health allowed
         {
-            regenerationTimer -= Time.deltaTime;
+            regenerationTimer += Time.deltaTime;
         }
-        
-        if (regenerationTimer <= 0.0f) // when the timer hits 0
+
+        if (regenerationTimer >= regenerationTimeToCount) // when the timer hits 0
         {
             timerEnded();
+            Debug.Log("Time Ended");
         }
 
     }
@@ -60,7 +61,7 @@ public class PlayerHealth : MonoBehaviour
         //Debug.Log("Time Ended");
 
         regenerationTimeToCount += 5f; // add to time the timer
-        regenerationTimer = regenerationTimeToCount; // reset timer
+        ResetRegenerationTimer(); // reset timer
 
         ChangePlayerHealth(1); // give the player health
     }
@@ -89,7 +90,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void ResetRegenerationTimer() // resets the timer
     {
-        regenerationTimer = regenerationTimeToCount;
+        regenerationTimer = 0;
 
         //Debug.Log("reset regen timer");
 
