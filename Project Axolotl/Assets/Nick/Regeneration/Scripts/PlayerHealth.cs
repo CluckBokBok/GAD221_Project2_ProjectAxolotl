@@ -22,7 +22,7 @@ public class PlayerHealth : MonoBehaviour
 
     [Header("Timer")]
     [Tooltip("if true countdown, if false dont countdown")]
-    public bool countDown; // wether the timer is active or deactive
+    public bool canCount; // wether the timer is active or deactive
 
     [Header("References")]
     public TextMeshProUGUI healthText; // Health UI
@@ -36,19 +36,19 @@ public class PlayerHealth : MonoBehaviour
         maxHealthAllowed = 5; // testing max health
         health = 3; // testing health
 
-        countDown = true;
+        canCount = true;
         UpdatePlayerHealthUI();
         //Debug.Log("end of start");
     }
 
     void Update()
     {
-        if (countDown == true && health < maxHealthAllowed) // needs to be able to count down (bool) and less than the max health allowed
+        if (canCount == true && health < maxHealthAllowed) // needs to be able to count down (bool) and less than the max health allowed
         {
             regenerationTimer += Time.deltaTime;
         }
 
-        if (regenerationTimer >= regenerationTimeToCount) // when the timer hits 0
+        if (regenerationTimer >= regenerationTimeToCount) // when the timer reaches the end
         {
             timerEnded();
             Debug.Log("Time Ended");
@@ -99,14 +99,14 @@ public class PlayerHealth : MonoBehaviour
     public void ToggleTimer() // used to turn off and on the timer
     {
         
-        if (countDown == true)
+        if (canCount == true)
         {
-            countDown = false;
+            canCount = false;
         }
 
-        else if (countDown == false)
+        else if (canCount == false)
         {
-            countDown = true;
+            canCount = true;
         }
 
         //Debug.Log("time toggle");
