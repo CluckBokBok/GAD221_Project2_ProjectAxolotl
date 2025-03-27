@@ -5741,6 +5741,80 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1326854146}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1725549467
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1911822450}
+    m_Modifications:
+    - target: {fileID: 551157012204421460, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.7812839
+      objectReference: {fileID: 0}
+    - target: {fileID: 551157012204421460, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 551157012204421460, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -25.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 551157012204421460, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.31861997
+      objectReference: {fileID: 0}
+    - target: {fileID: 551157012204421460, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9922778
+      objectReference: {fileID: 0}
+    - target: {fileID: 551157012204421460, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 551157012204421460, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 551157012204421460, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.124035545
+      objectReference: {fileID: 0}
+    - target: {fileID: 551157012204421460, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 551157012204421460, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 551157012204421460, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 14.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2713828038148457253, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: playerHealth
+      value: 
+      objectReference: {fileID: 1824499558}
+    - target: {fileID: 3529897899216720369, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5441360100538900832, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: m_Name
+      value: Asset_BrokenMexicanBeerBottle_Hazard (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fc17f86340017f744807621d240d124f, type: 3}
+--- !u!4 &1725549468 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 551157012204421460, guid: fc17f86340017f744807621d240d124f, type: 3}
+  m_PrefabInstance: {fileID: 1725549467}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1752477150
 GameObject:
   m_ObjectHideFlags: 0
@@ -6214,6 +6288,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 695570443}
+  - {fileID: 1725549468}
   - {fileID: 926279209}
   - {fileID: 1829001886}
   - {fileID: 293155855}
@@ -6891,6 +6966,10 @@ PrefabInstance:
       propertyPath: playerHealth
       value: 
       objectReference: {fileID: 1824499558}
+    - target: {fileID: 3529897899216720369, guid: fc17f86340017f744807621d240d124f, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5441360100538900832, guid: fc17f86340017f744807621d240d124f, type: 3}
       propertyPath: m_Name
       value: Asset_BrokenMexicanBeerBottle_Hazard
