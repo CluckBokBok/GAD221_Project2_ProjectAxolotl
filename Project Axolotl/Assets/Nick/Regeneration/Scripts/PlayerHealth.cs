@@ -17,8 +17,11 @@ public class PlayerHealth : MonoBehaviour
     // IMPORTANT - keep health value in single digit or the UI will not align
 
     [Header("Regeneration")]
-    public float regenerationTimer = 10.0f;
-    public float regenerationTimeToCount = 10f;
+    public float regenerationTimer = 0f; // timer
+    public float regenerationTimeToCount = 10f; // timer to count to
+
+    [SerializeField] private int amountOfTimesRegenerated = 0; // keep at 0
+    public int maxAmountOfRegen = 5; // max amount of times player can regen
 
     [Header("Timer")]
     [Tooltip("if true countdown, if false dont countdown")]
@@ -32,9 +35,10 @@ public class PlayerHealth : MonoBehaviour
 
     private void Start()
     {
-        regenerationTimer = 0f; // testing timer
+        regenerationTimer = 0f; // reset time
+
         maxHealthAllowed = 5; // testing max health
-        health = 3; // testing health
+        health = 4; // testing health
 
         canCount = true;
         UpdatePlayerHealthUI();
@@ -45,7 +49,10 @@ public class PlayerHealth : MonoBehaviour
     {
         if (canCount == true && health < maxHealthAllowed) // needs to be able to count down (bool) and less than the max health allowed
         {
-            regenerationTimer += Time.deltaTime;
+            if (amountOfTimesRegenerated < maxAmountOfRegen)
+            {
+                regenerationTimer += Time.deltaTime;
+            }          
         }
 
         if (regenerationTimer >= regenerationTimeToCount) // when the timer reaches the end
@@ -56,11 +63,13 @@ public class PlayerHealth : MonoBehaviour
 
     }
 
-    public void timerEnded() // occurs when the timer hits 0
+    public void timerEnded() // occurs when the timer is reached
     {
         //Debug.Log("Time Ended");
 
-        regenerationTimeToCount += 5f; // add to time the timer
+        regenerationTimeToCount += 2f; // add to time the timer
+        amountOfTimesRegenerated += 1;
+
         ResetRegenerationTimer(); // reset timer
 
         ChangePlayerHealth(1); // give the player health

@@ -29,7 +29,6 @@ public class RegenerationSlider : MonoBehaviour
 
         else if (pHealth.regenerationTimer <= 0) // when bar reaches 0
         {
-            Debug.Log("reset timeraaaaa");
             pHealth.ResetRegenerationTimer(); // reset
         }
 
