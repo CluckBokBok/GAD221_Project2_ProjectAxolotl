@@ -55,7 +55,7 @@ public class PlayerHealth : MonoBehaviour
             }          
         }
 
-        if (regenerationTimer >= regenerationTimeToCount) // when the timer reaches the end
+        if (regenerationTimer >= regenerationTimeToCount) // when the timer reaches the end 
         {
             timerEnded();
             Debug.Log("Time Ended");
