@@ -2867,6 +2867,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8738302532545117143, guid: 78261d0863095704cbd6b35b9ae9dd04, type: 3}
+      propertyPath: damageIndicatorFlash
+      value: 
+      objectReference: {fileID: 1229359886}
+    - target: {fileID: 8738302532545117143, guid: 78261d0863095704cbd6b35b9ae9dd04, type: 3}
       propertyPath: regenerationTimeToCount
       value: 10
       objectReference: {fileID: 0}
@@ -3725,6 +3729,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1229359886 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3983389561006742727, guid: bcd1db2925c7e3b4aa4b953b93d09c05, type: 3}
+  m_PrefabInstance: {fileID: 1229359883}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1304985759
 PrefabInstance:
   m_ObjectHideFlags: 0
