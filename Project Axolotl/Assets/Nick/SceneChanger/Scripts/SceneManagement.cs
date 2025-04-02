@@ -4,6 +4,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// general manager of scene stuff
+
 public class SceneManagement : MonoBehaviour
 {
 
