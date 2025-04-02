@@ -563,6 +563,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 678997080897940095, guid: eb843790d838bf147908f84ad78d458d, type: 3}
   m_PrefabInstance: {fileID: 3160055112362368555}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2043864592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3983389561006742727, guid: bcd1db2925c7e3b4aa4b953b93d09c05, type: 3}
+  m_PrefabInstance: {fileID: 5958288425998808079}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &240791240288004146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -627,6 +632,10 @@ PrefabInstance:
       propertyPath: maxHealthText
       value: 
       objectReference: {fileID: 4139460989247836170}
+    - target: {fileID: 8738302532545117143, guid: 78261d0863095704cbd6b35b9ae9dd04, type: 3}
+      propertyPath: damageIndicatorFlash
+      value: 
+      objectReference: {fileID: 2043864592}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
