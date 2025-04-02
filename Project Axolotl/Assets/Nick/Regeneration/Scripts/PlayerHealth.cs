@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 // used to regenerate the players health overtime (axolotl)
 
@@ -30,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
     [Header("References")]
     public TextMeshProUGUI healthText; // Health UI
     public TextMeshProUGUI maxHealthText; // Max Health UI
+    public GameObject damageIndicatorFlash; // Red Damage Effect Image
 
     #endregion
 
@@ -80,6 +82,10 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log("Adding [" + healthAmount + "] Health");
         health += healthAmount;
         
+        if (healthAmount < 0)
+        {
+            DamageIndicator();
+        }
 
         #region Health Limits
         if (health > maxHealthAllowed)
@@ -130,5 +136,24 @@ public class PlayerHealth : MonoBehaviour
         //Debug.Log("health UI updated");
 
     }
+
+    public void DamageIndicator() // used for damage indication
+    {
+        //Debug.Log("start damage effect");
+        StartCoroutine(DamageEffect()); // play damage effect
+        
+        
+    }
+
+    IEnumerator DamageEffect()
+    {
+        //Debug.Log("activating red effect");
+        damageIndicatorFlash.SetActive(true); // turns on the damage effect
+
+        yield return new WaitForSeconds(0.75f); // wait
+
+        damageIndicatorFlash.SetActive(false); // turns off the damage effect
+    }
+
 
 }
