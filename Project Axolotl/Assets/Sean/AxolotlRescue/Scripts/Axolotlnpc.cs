@@ -8,6 +8,7 @@ public class Axolotlnpc : MonoBehaviour
     [SerializeField] private bool follow = false;
     private FloatController player;
     private Vector3 offset;
+    public bool rescued = false;
 
     public float detectrange = 2f;
     //[SerializeField] private float distance = 1.2f;
