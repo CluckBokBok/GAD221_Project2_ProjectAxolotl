@@ -32,6 +32,7 @@ public class PlayerHealth : MonoBehaviour
     public TextMeshProUGUI healthText; // Health UI
     public TextMeshProUGUI maxHealthText; // Max Health UI
     public GameObject damageIndicatorFlash; // Red Damage Effect Image
+    [SerializeField] private SceneManagement SceneChanger; // reference
 
     #endregion
 
@@ -45,6 +46,8 @@ public class PlayerHealth : MonoBehaviour
         canCount = true;
         UpdatePlayerHealthUI();
         //Debug.Log("end of start");
+        SceneChanger = FindObjectOfType<SceneManagement>();
+
     }
 
     void Update()
@@ -97,6 +100,8 @@ public class PlayerHealth : MonoBehaviour
         {
             health = 0;
             Debug.Log("health went below 0");
+            SceneChanger.LoadSceneByName("Death Scene");
+
         }
         #endregion
 
