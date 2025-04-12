@@ -32,6 +32,8 @@ public class PlayerHealth : MonoBehaviour
     public TextMeshProUGUI healthText; // Health UI
     public TextMeshProUGUI maxHealthText; // Max Health UI
     public GameObject damageIndicatorFlash; // Red Damage Effect Image
+    public GameObject regenIndicatorFlash; // Regeneration Effect Image
+
     [SerializeField] private SceneManagement SceneChanger; // reference
 
     #endregion
@@ -88,6 +90,11 @@ public class PlayerHealth : MonoBehaviour
         if (healthAmount < 0)
         {
             DamageIndicator();
+        }
+
+        if (healthAmount > 0)
+        {
+            StartCoroutine(RegenerationEffect());
         }
 
         #region Health Limits
@@ -158,6 +165,16 @@ public class PlayerHealth : MonoBehaviour
         yield return new WaitForSeconds(0.75f); // wait
 
         damageIndicatorFlash.SetActive(false); // turns off the damage effect
+    }
+
+    IEnumerator RegenerationEffect()
+    {
+        //Debug.Log("activating red effect");
+        regenIndicatorFlash.SetActive(true); // turns on the regen effect
+
+        yield return new WaitForSeconds(0.75f); // wait
+
+        regenIndicatorFlash.SetActive(false); // turns off the regen effect
     }
 
 
