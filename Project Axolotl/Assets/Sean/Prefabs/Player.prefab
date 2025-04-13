@@ -93,6 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1097211108329207319}
+  - component: {fileID: 6240891502901784335}
   - component: {fileID: 280483512481722936}
   - component: {fileID: 7001850307735068797}
   - component: {fileID: 7410921230479259098}
@@ -119,6 +120,24 @@ Transform:
   - {fileID: 6191703456900090485}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6240891502901784335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8047924944352068306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80425cebcfb274549ba01026aec6c234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  axolotlUI: {fileID: 0}
+  panelUI: {fileID: 0}
+  tutText: Movement tutorial!
+  tutDesc: WASD to move!, E to lead Axolotls!, Q to make them stop following!
+  tutSprite: {fileID: 21300000, guid: ee985f352e77de44195d4f16dc9cadf9, type: 3}
+  tutSpriteDesc: Save them!!!
 --- !u!50 &280483512481722936
 Rigidbody2D:
   serializedVersion: 4
@@ -158,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d6364c3915b524784ef04797877cf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashspeed: 500
   speed: 20
   rb: {fileID: 0}
 --- !u!61 &7410921230479259098

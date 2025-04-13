@@ -1,9 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Schema;
 using UnityEngine;
 
 public class Axolotlnpc : MonoBehaviour
 {
+    
+    private bool axoTutorial = true;
+    private infoUI infoUI;
+    [SerializeField] Sprite axoTutorialSprite;
+    
     private Vector3 Followtarget;
     [SerializeField] private bool follow = false;
     private FloatController player;
@@ -17,11 +24,29 @@ public class Axolotlnpc : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<FloatController>();
+        infoUI = GameObject.FindGameObjectWithTag("Player").GetComponent<infoUI>();
     }
 
     public void ToggleFollow()
     {
         follow = !follow;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Player")
+        {
+            if (other.gameObject.GetComponent<infoUI>().axolotlUI.axolotlsaved > 0)
+            {
+                axoTutorial = false;
+            }
+            if (axoTutorial)
+            {
+                axoTutorial = false;
+                infoUI.PanelUpdate("Save the Axolotls!", "Press E to lead them to the Extraction zone!",
+                    axoTutorialSprite, "Find them all!");
+            }
+        }
     }
 
     // Update is called once per frame

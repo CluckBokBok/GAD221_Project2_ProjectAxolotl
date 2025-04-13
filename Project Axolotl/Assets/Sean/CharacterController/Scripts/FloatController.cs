@@ -6,7 +6,8 @@ using UnityEngine.Rendering;
 
 public class FloatController : MonoBehaviour
 {
-    public float speed = 20f;
+    public float dashspeed = 500f;
+    public float speed = 350f;
     public Rigidbody2D rb;
     //public float detectrange = 1f;
     //private Axolotlnpc[] axolotlnpcs;
@@ -39,11 +40,21 @@ public class FloatController : MonoBehaviour
     {
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
+        
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            rb.AddForce(new Vector2(h, v) * dashspeed, ForceMode2D.Force);
+        }
+        else
+        {
+            rb.AddForce(new Vector2(h, v) * speed, ForceMode2D.Force);
+        }
+        
 
         
         
         
-        rb.AddForce(new Vector2(h, v) * speed, ForceMode2D.Force);
+        
 
         
     }

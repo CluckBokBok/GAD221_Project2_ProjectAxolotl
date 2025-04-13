@@ -6,7 +6,7 @@ using UnityEngine;
 public class AxolotlUIcount : MonoBehaviour
 {
     private int axolotlsToFind;
-    private int axolotlsaved;
+    public int axolotlsaved;
     private TextMeshProUGUI text;
     private AxolotlRescuezone zone;
     // Start is called before the first frame update

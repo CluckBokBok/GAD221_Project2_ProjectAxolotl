@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6665404513738694737}
   - component: {fileID: 4210843203213833146}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Axolotlsprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,8 +27,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2922712053516161928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 588
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d1092cfc5c11ed747b835ada5b5e94a4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -158,6 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f5f3e51b7d90864f90c1a705aecb9ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  axolotlUI: {fileID: 0}
+  axoTutorialSprite: {fileID: 21300000, guid: 0a365f5e9a131e044abc26649c06ab69, type: 3}
   follow: 0
   rescued: 0
   detectrange: 2
@@ -190,7 +192,7 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
