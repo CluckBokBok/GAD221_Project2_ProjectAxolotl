@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelOne/Level One.unity
     guid: 2e2b8502d5942fd4794fc5079110ddfc
+  - enabled: 1
+    path: Assets/Scenes/LevelOne/Death Scene.unity
+    guid: 8cd53d5f2460ce648b694dcd7636226f
+  - enabled: 1
+    path: Assets/Scenes/LevelOne/Escape Scene.unity
+    guid: 967e6bf8506e5bb46a87c8a414efa245
   m_configObjects: {}
