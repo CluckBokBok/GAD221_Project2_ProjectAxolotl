@@ -6099,6 +6099,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -1.324
       objectReference: {fileID: 0}
+    - target: {fileID: 2588241973927769336, guid: bcd1db2925c7e3b4aa4b953b93d09c05, type: 3}
+      propertyPath: questobject
+      value: 
+      objectReference: {fileID: 1267967849}
     - target: {fileID: 2684267168949748580, guid: bcd1db2925c7e3b4aa4b953b93d09c05, type: 3}
       propertyPath: m_fontSize
       value: 80
@@ -6323,6 +6327,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5071697477574367213, guid: bcd1db2925c7e3b4aa4b953b93d09c05, type: 3}
+      propertyPath: pointerprefab
+      value: 
+      objectReference: {fileID: 7778598935881160620, guid: 79dc99fbfecf4e248930dcd744a06b43, type: 3}
     - target: {fileID: 5601673692426941921, guid: bcd1db2925c7e3b4aa4b953b93d09c05, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -6496,7 +6504,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7770799570584222437, guid: bcd1db2925c7e3b4aa4b953b93d09c05, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4567501963891230649, guid: bcd1db2925c7e3b4aa4b953b93d09c05, type: 3}
       insertIndex: -1

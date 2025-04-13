@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class AxolotlUIcount : MonoBehaviour
 {
-    private int axolotlsToFind;
+    public int axolotlsToFind;
     public int axolotlsaved;
     private TextMeshProUGUI text;
     private AxolotlRescuezone zone;
