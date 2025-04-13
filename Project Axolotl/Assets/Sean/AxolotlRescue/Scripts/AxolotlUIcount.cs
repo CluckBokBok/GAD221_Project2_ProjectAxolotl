@@ -22,6 +22,6 @@ public class AxolotlUIcount : MonoBehaviour
 
     {
         axolotlsaved = zone.rescuecount;
-        text.text = "Axolotles rescued: " + axolotlsaved + "/ " +axolotlsToFind.ToString();
+        text.text = axolotlsaved + "/" +axolotlsToFind.ToString();
     }
 }
