@@ -535,7 +535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiObject: {fileID: 1241839582}
-  animationDuration: 0.5
+  animationDuration: 0.35
   animationCurve:
     serializedVersion: 2
     m_Curve:
@@ -1531,7 +1531,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiObject: {fileID: 89808748}
-  animationDuration: 0.5
+  animationDuration: 0.35
   animationCurve:
     serializedVersion: 2
     m_Curve:

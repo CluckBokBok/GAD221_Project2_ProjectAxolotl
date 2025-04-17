@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class UIAnimateToggle : MonoBehaviour
+public class UITriggerPopup : MonoBehaviour
 {
     public GameObject uiObject;
     public float animationDuration = 0.35f;
@@ -11,7 +11,7 @@ public class UIAnimateToggle : MonoBehaviour
     public Vector3 shownScale = Vector3.one;
 
     private Coroutine currentRoutine;
-    private bool isPaused = false;
+    private bool hasTriggered = false;
 
     private void Awake()
     {
@@ -22,6 +22,22 @@ public class UIAnimateToggle : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player") && !hasTriggered)
+        {
+            hasTriggered = true;
+            ShowUI();
+            Time.timeScale = 0f; 
+        }
+    }
+
+    public void ClosePopup()
+    {
+        HideUI();
+        Time.timeScale = 1f; 
+    }
+
     public void ShowUI()
     {
         if (currentRoutine != null)
@@ -30,10 +46,6 @@ public class UIAnimateToggle : MonoBehaviour
         uiObject.SetActive(true);
         uiObject.transform.localScale = hiddenScale;
         currentRoutine = StartCoroutine(ScaleUI(shownScale, true));
-
-       
-        Time.timeScale = 0f;
-        isPaused = true;
     }
 
     public void HideUI()
@@ -42,10 +54,6 @@ public class UIAnimateToggle : MonoBehaviour
             StopCoroutine(currentRoutine);
 
         currentRoutine = StartCoroutine(ScaleUI(hiddenScale, false));
-
-       
-        Time.timeScale = 1f;
-        isPaused = false;
     }
 
     private IEnumerator ScaleUI(Vector3 targetScale, bool setActiveOnEnd)
@@ -64,9 +72,7 @@ public class UIAnimateToggle : MonoBehaviour
         uiObject.transform.localScale = targetScale;
 
         if (!setActiveOnEnd)
-        {
             uiObject.SetActive(false);
-        }
     }
 }
 
