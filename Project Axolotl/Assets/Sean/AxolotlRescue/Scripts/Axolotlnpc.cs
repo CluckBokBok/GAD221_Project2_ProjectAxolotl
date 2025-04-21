@@ -32,7 +32,7 @@ public class Axolotlnpc : MonoBehaviour
         follow = !follow;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    /*private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
@@ -47,7 +47,7 @@ public class Axolotlnpc : MonoBehaviour
                     axoTutorialSprite, "Find them all!");
             }
         }
-    }
+    } */
 
     // Update is called once per frame
     void Update()

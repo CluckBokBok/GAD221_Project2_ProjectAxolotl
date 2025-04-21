@@ -37,7 +37,7 @@ public class infoUI : MonoBehaviour
         id = panelInfo.imageDesc;
         if (tutorial)
         {
-            InitTutorial();
+            //InitTutorial();
             tutorial = false;
         }
     }
@@ -47,13 +47,13 @@ public class infoUI : MonoBehaviour
         
     }
 
-    void InitTutorial()
+    /*void InitTutorial()
     {
         PanelUpdate(tutText,tutDesc,tutSprite,tutSpriteDesc);
     }
+    */
 
-
-    public void PanelUpdate(string title, string description, Sprite image, string imagedesc)
+    /*public void PanelUpdate(string title, string description, Sprite image, string imagedesc)
     {
         tt.text = title;
         dt.text = description;
@@ -61,7 +61,7 @@ public class infoUI : MonoBehaviour
         id.text = imagedesc;
         panelUI.SetActive(true);
         
-    }
+    } */
     
     
 

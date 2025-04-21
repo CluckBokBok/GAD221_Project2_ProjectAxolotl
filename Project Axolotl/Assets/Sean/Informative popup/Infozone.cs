@@ -17,7 +17,7 @@ public class Infozone : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    /*private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player" && !activated)
         {
@@ -25,7 +25,7 @@ public class Infozone : MonoBehaviour
           ui.PanelUpdate(title, description, image, imagedesc);
           activated = true;
         }
-    }
+    }*/
 
     // Update is called once per frame
     void Update()
